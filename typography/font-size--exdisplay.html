@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>X Core Typography Scale</title>
+  <style>
+    body {
+      font-family: Inter;
+      margin: 40px;
+      color: #1A1B1E;
+      background: #F9FAFB;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 40px 0;
+    }
+    thead th {
+      text-align: left;
+      border-bottom: 1px solid #B7BBC2;
+      padding: 10px 8px;
+    }
+    tbody td {
+      border-bottom: 1px solid #D9DADE;
+      padding: 10px 8px;
+      vertical-align: top;
+    }
+    code {
+      /* background: #EEEEF0;
+      padding: 4px 8px;
+      border-radius: 999px; */
+      font-family: Inter;
+      font-size: 14px;
+    }
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;        /* ← 여기만 바꾸면 간격 변경 */
+    }
+    .stack code {      /* 코드 줄 공통 스타일(선택) */
+      font-family: Inter;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>class</th>
+        <th>Style</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>exdisplay-sm</code></td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--exdisplay-sm); /* 6rem (96px) */</code>
+            <code>line-height: var(--exdisplay-sm--line-height); /* 1.05 or 105% */</code>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>exdisplay-md</code></td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--exdisplay-md); /* 7.5rem (120px) */</code>
+            <code>line-height: var(--exdisplay-md--line-height); /* 1.05 or 105% */</code>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>exdisplay-lg</code></td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--exdisplay-lg); /* 15rem (240px) */</code>
+            <code>line-height: var(--exdisplay-lg--line-height); /* 1.05 or 105% */</code>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>exdisplay-xlg</code></td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--exdisplay-xlg); /* 20rem (320px) */</code>
+            <code>line-height: var(--exdisplay-xlg--line-height); /* 1.05 or 105% */</code>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
