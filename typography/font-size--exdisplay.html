@@ -2,10 +2,10 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <title>X Core Typography Scale</title>
+  <title>Typography Scale</title>
   <style>
     body {
-      font-family: Inter;
+      font-family: "Pretendard Variable", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
       margin: 40px;
       color: #1A1B1E;
       background: #F9FAFB;
@@ -28,14 +28,14 @@
     }
     tbody td {
       border-bottom: 1px solid #D9DADE;
-      padding: 10px 8px;
+      padding: 24px 8px;
       vertical-align: top;
     }
     code {
       /* background: #EEEEF0;
       padding: 4px 8px;
       border-radius: 999px; */
-      font-family: Inter;
+      font-family: "Pretendard Variable", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
       font-size: 14px;
     }
     .stack {
@@ -44,7 +44,7 @@
       gap: 8px;        /* ← 여기만 바꾸면 간격 변경 */
     }
     .stack code {      /* 코드 줄 공통 스타일(선택) */
-      font-family: Inter;
+      font-family: "Pretendard Variable", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
       font-size: 14px;
     }
   </style>
@@ -54,43 +54,88 @@
     <thead>
       <tr>
         <th>class</th>
-        <th>Style</th>
+        <th>style</th>
+        <th>sm</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><code>exdisplay-sm</code></td>
         <td>
           <div class="stack">
-            <code>font-size: var(--exdisplay-sm); /* 6rem (96px) */</code>
-            <code>line-height: var(--exdisplay-sm--line-height); /* 1.05 or 105% */</code>
+            <code>역활명 : exdisplay-sm</code>
+            <code>토큰명 : --fs-96</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--fs-96); /* 6rem (96px) */</code>
+            <code>line-height: var(--fs-96--line-height); /* 1.05 or 105% */</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>* 3.6rem (60%) *</code>
+            <code>--fs-96: clamp(3.6rem, calc(3.32rem + 0.1953vw), 6rem);</code>
           </div>
         </td>
       </tr>
-      <tr>
-        <td><code>exdisplay-md</code></td>
+       <tr>
         <td>
           <div class="stack">
-            <code>font-size: var(--exdisplay-md); /* 7.5rem (120px) */</code>
-            <code>line-height: var(--exdisplay-md--line-height); /* 1.05 or 105% */</code>
+            <code>역활명 : exdisplay-md</code>
+            <code>토큰명 : --fs-120</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--fs-120); /* 7.5rem (120px) */</code>
+            <code>line-height: var(--fs-120--line-height); /* 1.05 or 105% */</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>* 4.5rem (60%) *</code>
+            <code>--fs-120: clamp(4.5rem, calc(4.15rem + 0.2441vw), 7.5rem);</code>
           </div>
         </td>
       </tr>
-      <tr>
-        <td><code>exdisplay-lg</code></td>
+       <tr>
         <td>
           <div class="stack">
-            <code>font-size: var(--exdisplay-lg); /* 15rem (240px) */</code>
-            <code>line-height: var(--exdisplay-lg--line-height); /* 1.05 or 105% */</code>
+            <code>역활명 : exdisplay-lg</code>
+            <code>토큰명 : --fs-240</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--fs-240); /* 15rem (240px) */</code>
+            <code>line-height: var(--fs-240--line-height); /* 1.05 or 105% */</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>* 7.5rem (50%) *</code>
+            <code>--fs-240: clamp(7.5rem, calc(6.75rem + 0.4883vw), 15rem);</code>
           </div>
         </td>
       </tr>
-      <tr>
-        <td><code>exdisplay-xlg</code></td>
+       <tr>
         <td>
           <div class="stack">
-            <code>font-size: var(--exdisplay-xlg); /* 20rem (320px) */</code>
-            <code>line-height: var(--exdisplay-xlg--line-height); /* 1.05 or 105% */</code>
+            <code>역활명 : exdisplay-xlg</code>
+            <code>토큰명 : --fs-320</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--fs-320); /* 20rem (320px) */</code>
+            <code>line-height: var(--fs-320--line-height); /* 1.05 or 105% */</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>* 10rem (50%) *</code>
+            <code>--fs-320: clamp(10rem, calc(9rem + 0.651vw), 20rem);</code>
           </div>
         </td>
       </tr>
