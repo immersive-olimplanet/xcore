@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Typography Scale - Display</title>
+  <style>
+    body {
+      font-family: "Pretendard Variable", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      margin: 40px;
+      color: #1A1B1E;
+      background: #F9FAFB;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 40px 0;
+    }
+    thead th {
+      text-align: left;
+      border-bottom: 1px solid #B7BBC2;
+      padding: 10px 8px;
+    }
+    tbody td {
+      border-bottom: 1px solid #D9DADE;
+      padding: 24px 8px;
+      vertical-align: top;
+    }
+    code {
+      /* background: #EEEEF0;
+      padding: 4px 8px;
+      border-radius: 999px; */
+      font-family: "Pretendard Variable", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      font-size: 14px;
+    }
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;        /* ← 여기만 바꾸면 간격 변경 */
+    }
+    .stack code {      /* 코드 줄 공통 스타일(선택) */
+      font-family: "Pretendard Variable", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>class</th>
+        <th>style</th>
+        <th>sm</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="stack">
+            <code>역활명 : display-sm</code>
+            <code>토큰명 : --fs-48</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--fs-48); /* 3rem (48px) */</code>
+            <code>line-height: var(--fs-48--line-height); /* 1.1 or 110% */</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>* 2.1rem (70%) *</code>
+            <code>--fs-48: clamp(2.1rem, calc(1.995rem + 0.0781vw), 3rem);</code>
+          </div>
+        </td>
+      </tr>
+       <tr>
+        <td>
+          <div class="stack">
+            <code>역활명 : display-md</code>
+            <code>토큰명 : --fs-56</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--fs-56); /* 3.5rem (56px) */</code>
+            <code>line-height: var(--fs-56--line-height); /* 1.1 or 110% */</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>* 2.45rem (70%) *</code>
+            <code>--fs-56: clamp(2.45rem, calc(2.188rem + 0.082vw), 3.5rem);</code>
+          </div>
+        </td>
+      </tr>
+       <tr>
+        <td>
+          <div class="stack">
+            <code>역활명 : display-lg</code>
+            <code>토큰명 : --fs-64</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--fs-64); /* 4rem (64px) */</code>
+            <code>line-height: var(--fs-64--line-height); /* 1.1 or 110% */</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>* 2.8rem (70%) *</code>
+            <code>--fs-64: clamp(2.8rem, calc(2.66rem + 0.1094vw), 4rem);</code>
+          </div>
+        </td>
+      </tr>
+       <tr>
+        <td>
+          <div class="stack">
+            <code>역활명 : display-xlg</code>
+            <code>토큰명 : --fs-72</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>font-size: var(--fs-72); /* 4.5rem (72px) */</code>
+            <code>line-height: var(--fs-72--line-height); /* 1.1 or 110% */</code>
+          </div>
+        </td>
+        <td>
+          <div class="stack">
+            <code>* 3rem (66.7%) *</code>
+            <code>--fs-72: clamp(3rem, calc(2.85rem + 0.1289vw), 4.5rem);</code>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
