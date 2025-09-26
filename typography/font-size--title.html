@@ -102,19 +102,20 @@
         <td>
           <div class="stack">
             <code>역활명 : title-sm</code>
-            <code>토큰명 : <span class="copy">--fs-24</span></code>
+            <!-- <code>토큰명 : <span class="copy">--fs-24</span></code> -->
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>font-size: var(--fs-24); /* 1.5rem (24px) */</code>
-            <code>line-height: var(--fs-24--line-height); /* 1.3 (130%) */</code>
+            <code>font-size: 24px ( 1.5rem )</code>
+            <code>line-height: 1.2 or 1.3 ( 120 or 130% )</code>
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>* 1.35rem (90%) *</code>
-            <code><span class="copy">--fs-24: clamp(1.35rem, calc(1.315rem + 0.0117vw), 1.5rem);</span></code>
+            <code>font-size: 20px ( 1.25 rem )</code>
+            <code>line-height: 1.3 or 1.4 ( 130 or 140% )</code>
+            <!-- <code><span class="copy">--fs-24: clamp(1.35rem, calc(1.315rem + 0.0117vw), 1.5rem);</span></code> -->
           </div>
         </td>
       </tr>
@@ -122,19 +123,20 @@
         <td>
           <div class="stack">
             <code>역활명 : title-md</code>
-            <code>토큰명 : <span class="copy">--fs-26</span></code>
+            <!-- <code>토큰명 : <span class="copy">--fs-26</span></code> -->
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>font-size: var(--fs-26); /* 1.625rem (26px) */</code>
-            <code>line-height: var(--fs-26--line-height); /* 1.3 (130%) */</code>
+            <code>font-size: 26px ( 1.625rem )</code>
+            <code>line-height: 1.2 or 1.3 ( 120 or 130% )</code>
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>* 1.3rem (80%) *</code>
-            <code><span class="copy">--fs-26: clamp(1.3rem, calc(1.219rem + 0.0254vw), 1.625rem);</span></code>
+            <code>font-size: 20px ( 1.25 rem )</code>
+            <code>line-height: 1.3 or 1.4 ( 130 or 140% )</code>
+            <!-- <code><span class="copy">--fs-26: clamp(1.3rem, calc(1.219rem + 0.0254vw), 1.625rem);</span></code> -->
           </div>
         </td>
       </tr>
@@ -142,19 +144,20 @@
         <td>
           <div class="stack">
             <code>역활명 : title-lg</code>
-            <code>토큰명 : <span class="copy">--fs-28</span></code>
+            <!-- <code>토큰명 : <span class="copy">--fs-28</span></code> -->
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>font-size: var(--fs-28); /* 1.75rem (28px) */</code>
-            <code>line-height: var(--fs-28--line-height); /* 1.3 (130%) */</code>
+            <code>font-size: 28px ( 1.75rem )</code>
+            <code>line-height: 1.2 or 1.3 ( 120 or 130% )</code>
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>* 1.4rem (80%) *</code>
-            <code><span class="copy">--fs-28: clamp(1.4rem, calc(1.313rem + 0.0273vw), 1.75rem);</span></code>
+            <code>font-size: 20px ( 1.25 rem )</code>
+            <code>line-height: 1.3 or 1.4 ( 130 or 140% )</code>
+            <!-- <code><span class="copy">--fs-28: clamp(1.4rem, calc(1.313rem + 0.0273vw), 1.75rem);</span></code> -->
           </div>
         </td>
       </tr>
@@ -162,19 +165,20 @@
         <td>
           <div class="stack">
             <code>역활명 : title-xlg</code>
-            <code>토큰명 : <span class="copy">--fs-30</span></code>
+            <!-- <code>토큰명 : <span class="copy">--fs-30</span></code> -->
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>font-size: var(--fs-30); /* 1.875rem (30px) */</code>
-            <code>line-height: var(--fs-30--line-height); /* 1.3 (130%) */</code>
+            <code>font-size: 30px ( 1.875rem )</code>
+            <code>line-height: 1.2 or 1.3 ( 120 or 130% )</code>
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>* 1.5rem (80%) *</code>
-            <code><span class="copy">--fs-30: clamp(1.5rem, calc(1.406rem + 0.0293vw), 1.875rem);</span></code>
+            <code>font-size: 20px ( 1.25 rem )</code>
+            <code>line-height: 1.3 or 1.4 ( 130 or 140% )</code>
+            <!-- <code><span class="copy">--fs-30: clamp(1.5rem, calc(1.406rem + 0.0293vw), 1.875rem);</span></code> -->
           </div>
         </td>
       </tr>
@@ -183,16 +187,16 @@
 </body>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('code .copy').forEach(span => {
-    const btn = document.createElement('button');
-    btn.className = 'copy-btn';
-    btn.type = 'button';
-    btn.setAttribute('aria-label', '코드 복사');
-    btn.title = '코드 복사';
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('code .copy').forEach(span => {
+      const btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.type = 'button';
+      btn.setAttribute('aria-label', '코드 복사');
+      btn.title = '코드 복사';
 
-    // 기본 복사 아이콘 (문서 2장)
-    btn.innerHTML = `
+      // 기본 복사 아이콘 (문서 2장)
+      btn.innerHTML = `
       <svg class="icon-copy" viewBox="0 0 24 24">
         <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 
         0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 
@@ -200,28 +204,28 @@ document.addEventListener('DOMContentLoaded', () => {
         16H8V7h11v14z"/>
       </svg>
     `;
-    span.after(btn);
+      span.after(btn);
+    });
   });
-});
 
-document.addEventListener('click', async (e) => {
-  const btn = e.target.closest('.copy-btn');
-  if (!btn) return;
+  document.addEventListener('click', async (e) => {
+    const btn = e.target.closest('.copy-btn');
+    if (!btn) return;
 
-  const target = btn.previousElementSibling;
-  const text = target?.textContent?.trim() || '';
+    const target = btn.previousElementSibling;
+    const text = target?.textContent?.trim() || '';
 
-  try {
-    await navigator.clipboard.writeText(text);
-  } catch (err) {
-    // fallback
-    const ta = document.createElement('textarea');
-    ta.value = text; document.body.appendChild(ta);
-    ta.select(); document.execCommand('copy'); ta.remove();
-  }
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (err) {
+      // fallback
+      const ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); ta.remove();
+    }
 
-  // ✅ 성공 시 GitHub 스타일 체크 아이콘으로 변경
-  btn.innerHTML = `
+    // ✅ 성공 시 GitHub 스타일 체크 아이콘으로 변경
+    btn.innerHTML = `
     <svg class="icon-check" viewBox="0 0 24 24">
       <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 
       12 12 12-5.37 12-12S18.63 0 12 0zm-2 
@@ -230,9 +234,9 @@ document.addEventListener('click', async (e) => {
     </svg>
   `;
 
-  // 1.2초 뒤 다시 복사 아이콘으로 복귀
-  setTimeout(() => {
-    btn.innerHTML = `
+    // 1.2초 뒤 다시 복사 아이콘으로 복귀
+    setTimeout(() => {
+      btn.innerHTML = `
       <svg class="icon-copy" viewBox="0 0 24 24">
         <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 
         0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 
@@ -240,8 +244,8 @@ document.addEventListener('click', async (e) => {
         16H8V7h11v14z"/>
       </svg>
     `;
-  }, 1200);
-});
+    }, 1200);
+  });
 </script>
 
 

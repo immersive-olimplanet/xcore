@@ -102,13 +102,13 @@
         <td>
           <div class="stack">
             <code>역활명 : body-sm</code>
-            <code>토큰명 : <span class="copy">--fs-14</span></code>
+            <!-- <code>토큰명 : <span class="copy">--fs-14</span></code> -->
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>font-size: var(--fs-14); /* 0.875rem (14px) */</code>
-            <code>line-height: var(--fs-14--line-height); /* 1.5 (150%) */</code>
+            <code>font-size: 14px ( 0.875rem )</code>
+            <code>line-height: 1.4 or 1.5 ( 140 or 150% )</code>
           </div>
         </td>
         <td>
@@ -122,19 +122,19 @@
         <td>
           <div class="stack">
             <code>역활명 : body-md</code>
-            <code>토큰명 : <span class="copy">--fs-16</span></code>
+            <!-- <code>토큰명 : <span class="copy">--fs-16</span></code> -->
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>font-size: var(--fs-16); /* 1rem (16px) */</code>
-            <code>line-height: var(--fs-16--line-height); /* 1.4 (140%) */</code>
+            <code>font-size: 16px ( 1rem )</code>
+            <code>line-height: 1.4 or 1.5 ( 140 or 150% )</code>
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>-</code>
-            <code>-</code>
+            <code>font-size: 14px ( 0.875rem )</code>
+            <code>line-height: 1.4 or 1.5 ( 140 or 150% )</code>
           </div>
         </td>
       </tr>
@@ -142,19 +142,19 @@
         <td>
           <div class="stack">
             <code>역활명 : body-lg</code>
-            <code>토큰명 : <span class="copy">--fs-18</span></code>
+            <!-- <code>토큰명 : <span class="copy">--fs-18</span></code> -->
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>font-size: var(--fs-18); /* 1.125rem (18px) */</code>
-            <code>line-height: var(--fs-18--line-height); /* 1.4 (140%) */</code>
+            <code>font-size: 18px ( 1.125rem )</code>
+            <code>line-height: 1.4 or 1.5 ( 140 or 150% )</code>
           </div>
         </td>
         <td>
-         <div class="stack">
-            <code>-</code>
-            <code>-</code>
+          <div class="stack">
+            <code>font-size: 14px ( 0.875rem )</code>
+            <code>line-height: 1.4 or 1.5 ( 140 or 150% )</code>
           </div>
         </td>
       </tr>
@@ -162,19 +162,19 @@
         <td>
           <div class="stack">
             <code>역활명 : body-xlg</code>
-            <code>토큰명 : <span class="copy">--fs-20</span></code>
+            <!-- <code>토큰명 : <span class="copy">--fs-20</span></code> -->
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>font-size: var(--fs-20); /* 1.25rem (20px) */</code>
-            <code>line-height: var(--fs-20--line-height); /* 1.4 (140%) */</code>
+            <code>font-size: 20px ( 1.25rem )</code>
+            <code>line-height: 1.4 or 1.5 ( 140 or 150% )</code>
           </div>
         </td>
         <td>
           <div class="stack">
-            <code>-</code>
-            <code>-</code>
+            <code>font-size: 14px ( 0.875rem )</code>
+            <code>line-height: 1.4 or 1.5 ( 140 or 150% )</code>
           </div>
         </td>
       </tr>
@@ -183,16 +183,16 @@
 </body>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('code .copy').forEach(span => {
-    const btn = document.createElement('button');
-    btn.className = 'copy-btn';
-    btn.type = 'button';
-    btn.setAttribute('aria-label', '코드 복사');
-    btn.title = '코드 복사';
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('code .copy').forEach(span => {
+      const btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.type = 'button';
+      btn.setAttribute('aria-label', '코드 복사');
+      btn.title = '코드 복사';
 
-    // 기본 복사 아이콘 (문서 2장)
-    btn.innerHTML = `
+      // 기본 복사 아이콘 (문서 2장)
+      btn.innerHTML = `
       <svg class="icon-copy" viewBox="0 0 24 24">
         <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 
         0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 
@@ -200,28 +200,28 @@ document.addEventListener('DOMContentLoaded', () => {
         16H8V7h11v14z"/>
       </svg>
     `;
-    span.after(btn);
+      span.after(btn);
+    });
   });
-});
 
-document.addEventListener('click', async (e) => {
-  const btn = e.target.closest('.copy-btn');
-  if (!btn) return;
+  document.addEventListener('click', async (e) => {
+    const btn = e.target.closest('.copy-btn');
+    if (!btn) return;
 
-  const target = btn.previousElementSibling;
-  const text = target?.textContent?.trim() || '';
+    const target = btn.previousElementSibling;
+    const text = target?.textContent?.trim() || '';
 
-  try {
-    await navigator.clipboard.writeText(text);
-  } catch (err) {
-    // fallback
-    const ta = document.createElement('textarea');
-    ta.value = text; document.body.appendChild(ta);
-    ta.select(); document.execCommand('copy'); ta.remove();
-  }
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (err) {
+      // fallback
+      const ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); ta.remove();
+    }
 
-  // ✅ 성공 시 GitHub 스타일 체크 아이콘으로 변경
-  btn.innerHTML = `
+    // ✅ 성공 시 GitHub 스타일 체크 아이콘으로 변경
+    btn.innerHTML = `
     <svg class="icon-check" viewBox="0 0 24 24">
       <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 
       12 12 12-5.37 12-12S18.63 0 12 0zm-2 
@@ -230,9 +230,9 @@ document.addEventListener('click', async (e) => {
     </svg>
   `;
 
-  // 1.2초 뒤 다시 복사 아이콘으로 복귀
-  setTimeout(() => {
-    btn.innerHTML = `
+    // 1.2초 뒤 다시 복사 아이콘으로 복귀
+    setTimeout(() => {
+      btn.innerHTML = `
       <svg class="icon-copy" viewBox="0 0 24 24">
         <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 
         0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 
@@ -240,8 +240,8 @@ document.addEventListener('click', async (e) => {
         16H8V7h11v14z"/>
       </svg>
     `;
-  }, 1200);
-});
+    }, 1200);
+  });
 </script>
 
 
